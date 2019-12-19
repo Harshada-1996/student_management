@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  actno: 1
+  acttype: MyString
+  student: one
+
+two:
+  actno: 1
+  acttype: MyString
+  student: two
