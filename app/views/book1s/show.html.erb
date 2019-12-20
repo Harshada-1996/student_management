@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rake no:</strong>
+  <%= @book1.rake_no %>
+</p>
+
+<p>
+  <strong>Book no:</strong>
+  <%= @book1.book_no %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @book1.student %>
+</p>
+
+<%= link_to 'Edit', edit_book1_path(@book1) %> |
+<%= link_to 'Back', book1s_path %>

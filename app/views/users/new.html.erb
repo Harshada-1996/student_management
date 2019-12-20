@@ -1,14 +1,18 @@
 <h1>create an user</h1>
 <%= form_for @user do |f| %>
     <p>
-      <%= f.label :uname %><br>
+      <%= f.label :Name %><br>
       <%= f.text_field :uname %><br>
     </p>
     <p>
-      <%= f.label :uemail %><br>
+      <%= f.label :Email %><br>
       <%= f.text_field :uemail %>
     </p>
     <p>
-      <%= f.submit %>
+      <%= f.label :Password %><br>
+      <%= f.password_field :password%>
+    </p>
+    <p>
+      <%= f.submit(@user.new_record? ? "sign up" :"update account")%>
     </p>
     <% end %>

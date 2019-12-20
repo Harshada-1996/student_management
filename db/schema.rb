@@ -10,7 +10,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_19_060740) do
+ActiveRecord::Schema.define(version: 2019_12_20_074103) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.integer "acc_no"
+    t.string "acc_type"
+    t.integer "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id"], name: "index_accounts_on_student_id"
+  end
+
+  create_table "book1s", force: :cascade do |t|
+    t.integer "rake_no"
+    t.integer "book_no"
+    t.integer "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id"], name: "index_book1s_on_student_id"
+  end
+
+  create_table "libraries", force: :cascade do |t|
+    t.string "lib_type"
+    t.string "bk_category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "standards", force: :cascade do |t|
+    t.string "std"
+    t.string "section"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "first_name"
+    t.string "middle_name"
+    t.string "sur_name"
+    t.string "s_location"
+    t.integer "standard_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["standard_id"], name: "index_students_on_standard_id"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "sub_name"
+    t.string "sub_code"
+    t.integer "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id"], name: "index_subjects_on_student_id"
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string "title"

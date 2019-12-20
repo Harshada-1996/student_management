@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<table>
+<tr>
+   <td>
+      <strong>Firstname:</strong>
+   </td>
+   <td>
+      <strong>Middlename:</strong>
+   </td>
+   <td>
+      <strong>Surname:</strong>
+   </td>
+   <td>
+      <strong>location:</strong>
+   </td>
+   <td>
+   <strong>Standard:</strong>
+   </td>
+  </tr>
+   <tr>
+   <td>
+      <%= @student.first_name %>
+   </td>
+   <td>
+      <%= @student.middle_name %>
+   </td>
+   <td>
+      <%= @student.sur_name %>
+  </td>
+  <td>
+     <%= @student.s_location %>
+  </td>
+  <td>
+  <%= @student.standard %>
+  </td>
+  </tr>
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>
