@@ -8,3 +8,13 @@ $navbar-default-bg:#08088A;
 .nav-item{
     margin-left: 15pt;
 }
+.jumbotron{
+    height: 500px;
+    background-image: asset-url("image1.jpg");
+    background-size: cover;
+}
+.btn
+{
+   font-size:1.7em;
+   background-color: #08088A;
+}
