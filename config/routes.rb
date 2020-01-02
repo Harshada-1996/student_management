@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   resources :students
   resources :tasks
   root 'pages#signup'
+
+  get 'pages/show' ,to: 'pages#show'
+  post 'pages/show' ,to: 'pages#show'
+  
   resources :users
   
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

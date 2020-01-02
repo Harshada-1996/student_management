@@ -1,3 +1,34 @@
 <div class="center jumbotron">
         <p> <%= link_to "Sign Up", new_session_path, class: "btn"%> <p>
+        <form class="form-container" action="/pages/show" method="POST" id="myForm" name="myForm">
+				  <h1>Login</h1>
+			  
+				  <label for="email"><b>Email</b></label>
+				  <input type="text" placeholder="Enter Email" name="email" required>
+			  
+				  <label for="psw"><b>Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw">
+			  
+				  <button type="submit" id="submit">Login</button>
+				  <button type="button" class="btn cancel" onclick="closeForm()" id="btnclose" >Close</button>
+       </form>
 </div>
+<script>
+$(document).ready(function(){
+ $('#submit').on("click",function(e){
+ 
+     
+         e.preventDefault
+      $.ajax({
+             url:"/pages/show",
+             type:"POST",
+             data:$('#myForm').serialize(),
+             datatype:"json",
+             success:function(response)
+              {
+                 alert('successfull');
+              }
+      });
+ });
+});
+ </script>
